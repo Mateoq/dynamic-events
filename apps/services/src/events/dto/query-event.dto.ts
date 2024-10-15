@@ -1,13 +1,13 @@
 export class QueryEventDto {
   city?: string;
-  startYear?: string;
-  startMonth?: string;
-  startDate?: string;
-  endYear?: string;
-  endMonth?: string;
-  endDate?: string;
-  startTime?: string;
-  endTime?: string;
+  startYear?: number;
+  startMonth?: number;
+  startDate?: number;
+  endYear?: number;
+  endMonth?: number;
+  endDate?: number;
+  time?: number;
   fullDay?: boolean;
   userId?: string;
+  email?: string;
 }

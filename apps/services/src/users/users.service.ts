@@ -31,6 +31,7 @@ export class UsersService {
 
     const user = new User();
     user.email = createUserDto.email;
+    user.name = createUserDto.name;
 
     try {
       const result = await this.usersRepo.save(user);

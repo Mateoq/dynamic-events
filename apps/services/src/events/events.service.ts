@@ -40,8 +40,7 @@ export class EventsService {
     event.endYear = createEventDto.endYear;
     event.endMonth = createEventDto.endMonth;
     event.endDate = createEventDto.endDate;
-    event.startTime = createEventDto.startTime;
-    event.endTime = createEventDto.endTime;
+    event.time = createEventDto.time;
     event.fullDay = createEventDto.fullDay ?? true;
     event.color = createEventDto.color;
     event.user = user;
@@ -70,8 +69,9 @@ export class EventsService {
   }
 
   findAll(data: QueryEventDto = {}) {
+    const { userId, email, ...rest } = data;
     return this.eventsRepo.find({
-      where: { ...data }
+      where: { ...rest, user: { id: userId, email } }
     });
   }
 
@@ -82,14 +82,16 @@ export class EventsService {
   }
 
   findBy(data: QueryEventDto = {}) {
+    const { userId, email, ...rest } = data;
     return this.eventsRepo.findOne({
-      where: { ...data }
+      where: { ...rest, user: { id: userId, email } }
     });
   }
 
   async update(id: string, updateEventDto: UpdateEventDto) {
+    const { userId: _, ...data } = updateEventDto;
     try {
-      await this.eventsRepo.update({ id }, { ...updateEventDto });
+      await this.eventsRepo.update({ id }, { ...data });
 
       const result = this.eventsRepo.findOne({
         where: { id }

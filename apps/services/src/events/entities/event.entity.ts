@@ -22,31 +22,28 @@ export class Event {
   @Column({ type: 'varchar', nullable: false })
   city: string;
 
-  @Column({ type: 'varchar', nullable: false, name: 'start_year' })
-  startYear: string;
+  @Column({ type: 'integer', nullable: false, name: 'start_year' })
+  startYear: number;
 
-  @Column({ type: 'varchar', nullable: false, name: 'start_month' })
-  startMonth: string;
+  @Column({ type: 'integer', nullable: false, name: 'start_month' })
+  startMonth: number;
 
-  @Column({ type: 'varchar', nullable: false, name: 'start_date' })
-  startDate: string;
+  @Column({ type: 'integer', nullable: false, name: 'start_date' })
+  startDate: number;
 
-  @Column({ type: 'varchar', nullable: false, name: 'end_year' })
-  endYear: string;
+  @Column({ type: 'integer', nullable: false, name: 'end_year' })
+  endYear: number;
 
-  @Column({ type: 'varchar', nullable: false, name: 'end_month' })
-  endMonth: string;
+  @Column({ type: 'integer', nullable: false, name: 'end_month' })
+  endMonth: number;
 
-  @Column({ type: 'varchar', nullable: false, name: 'end_date' })
-  endDate: string;
+  @Column({ type: 'integer', nullable: false, name: 'end_date' })
+  endDate: number;
 
-  @Column({ type: 'varchar', nullable: true, name: 'start_time' })
-  startTime?: string;
+  @Column({ type: 'integer', nullable: false, name: 'start_time' })
+  time: number;
 
-  @Column({ type: 'varchar', nullable: true, name: 'end_time' })
-  endTime?: string;
-
-  @Column({ type: 'bool', nullable: true, default: true, name: 'full_day' })
+  @Column({ type: 'bool', nullable: true, default: false, name: 'full_day' })
   fullDay: boolean;
 
   @Column({ type: 'varchar', nullable: true })

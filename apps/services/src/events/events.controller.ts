@@ -30,6 +30,7 @@ export class EventsController {
 
   @Get('/by')
   findBy(@Query() queryEventDto: QueryEventDto) {
+    console.log('QUERY', queryEventDto);
     return this.eventsService.findBy(queryEventDto);
   }
 

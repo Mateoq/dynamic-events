@@ -10,9 +10,15 @@
   "workspaces": [
     "apps/*"
   ],
+  "scripts": {
+    "start:dev": "concurrently \"yarn start:dev:services\" \"yarn start:dev:client\"",
+    "start:dev:services": "yarn workspaces @dynamic-events/services start:dev",
+    "start:dev:client": "yarn workspaces @dynamic-events/client dev"
+  },
   "devDependencies": {
     "@eslint/js": "^9.12.0",
     "@stylistic/eslint-plugin-js": "^2.9.0",
+    "concurrently": "^9.0.1",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
