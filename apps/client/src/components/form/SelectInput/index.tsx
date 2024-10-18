@@ -37,6 +37,7 @@ export const SelectInput = React.forwardRef<
       <div className="relative w-fit cursor-pointer">
         <select
           {...rest}
+          role="listbox"
           ref={ref}
           className={clsx(
             'min-h-11 border-2 px-2.5 rounded appearance-none cursor-pointer',

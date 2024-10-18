@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast should match snapshot 1`] = `
+<div>
+  <div
+    class="w-52 min-h-24 rounded filter drop-shadow-lg flex items-center justify-center p-5 z-[100] fixed bottom-5 right-5 bg-gray-900"
+    style="opacity: 1; will-change: transform; transform: none;"
+  >
+    <span
+      class="text-md text-gray-100"
+    >
+      Message
+    </span>
+  </div>
+</div>
+`;

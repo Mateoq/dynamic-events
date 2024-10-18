@@ -1,0 +1,681 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventsCalendar should match snapshot 1`] = `
+<div>
+  <section
+    class="px-24 py-20"
+  >
+    <div
+      class="w-full"
+    >
+      <div
+        class="w-full flex flex-col"
+      >
+        <div
+          class="w-full flex justify-between bg-gray-100 px-2 py-3"
+        >
+          <div
+            class="flex gap-x-2"
+          >
+            <button
+              aria-label="Previous"
+              class="transition-opacity hover:opacity-70 active:opacity-100"
+            >
+              <svg
+                fill="currentColor"
+                height="30px"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 320 512"
+                width="30px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Next"
+              class="transition-opacity hover:opacity-70 active:opacity-100"
+            >
+              <svg
+                fill="currentColor"
+                height="30px"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 320 512"
+                width="30px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center text-center"
+          >
+            <p
+              class="text-xl font-semibold text-gray-900"
+            >
+              October
+               - 
+              2024
+            </p>
+          </div>
+          <div
+            class="flex gap-x-2 items-center"
+          >
+            <label
+              class="flex flex-col w-fit"
+            >
+              <div
+                class="relative w-fit cursor-pointer"
+              >
+                <select
+                  class="min-h-11 border-2 px-2.5 rounded appearance-none cursor-pointer border-gray-700 min-w-64"
+                  role="listbox"
+                >
+                  <option
+                    value="MONTH"
+                  >
+                    Month
+                  </option>
+                  <option
+                    value="WEEK"
+                  >
+                    Week
+                  </option>
+                  <option
+                    value="DAY"
+                  >
+                    Day
+                  </option>
+                </select>
+                <div
+                  class="h-full w-10 absolute right-0 top-0 flex items-center justify-center"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="18px"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="18px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </label>
+            <button
+              class="min-w-24 h-10 px-3o flex items-center justify-center bg-gray-950 text-white text-lg hover:bg-gray-800 active:bg-gray-700 transition-colors"
+            >
+              New Event
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-7 grid-rows-calendar bg-gray-400 gap-1"
+        >
+          <div
+            class="bg-gray-400 flex items-center justify-center"
+          >
+            <span
+              class="text-gray-900 text-xl text-center"
+            >
+              Sunday
+            </span>
+          </div>
+          <div
+            class="bg-gray-400 flex items-center justify-center"
+          >
+            <span
+              class="text-gray-900 text-xl text-center"
+            >
+              Monday
+            </span>
+          </div>
+          <div
+            class="bg-gray-400 flex items-center justify-center"
+          >
+            <span
+              class="text-gray-900 text-xl text-center"
+            >
+              Tuesday
+            </span>
+          </div>
+          <div
+            class="bg-gray-400 flex items-center justify-center"
+          >
+            <span
+              class="text-gray-900 text-xl text-center"
+            >
+              Wednesday
+            </span>
+          </div>
+          <div
+            class="bg-gray-400 flex items-center justify-center"
+          >
+            <span
+              class="text-gray-900 text-xl text-center"
+            >
+              Thursday
+            </span>
+          </div>
+          <div
+            class="bg-gray-400 flex items-center justify-center"
+          >
+            <span
+              class="text-gray-900 text-xl text-center"
+            >
+              Friday
+            </span>
+          </div>
+          <div
+            class="bg-gray-400 flex items-center justify-center"
+          >
+            <span
+              class="text-gray-900 text-xl text-center"
+            >
+              Saturday
+            </span>
+          </div>
+          <div
+            class="h-full bg-gray-300"
+          />
+          <div
+            class="h-full bg-gray-300"
+          />
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              01
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              02
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              03
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              04
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              05
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              06
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              07
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              08
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              09
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              10
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              11
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              12
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              13
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              14
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(198, 205, 101);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  Test
+                </p>
+              </button>
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(84, 59, 196);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  Test 2
+                </p>
+              </button>
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              15
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(198, 205, 101);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  Test
+                </p>
+              </button>
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              16
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(198, 205, 101);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  Test
+                </p>
+              </button>
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              17
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              18
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              19
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              20
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              21
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              22
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              23
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              24
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              25
+            </span>
+            <div
+              class="flex flex-col w-full"
+            >
+              <button
+                class="flex-1 px-1 overflow-hidden"
+                style="background: rgb(76, 148, 200);"
+              >
+                <p
+                  class="text-white text-sm truncate"
+                >
+                  ANother
+                </p>
+              </button>
+            </div>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              26
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              27
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              28
+            </span>
+          </div>
+          <div
+            class="min-h-32 bg-gray-100 p-3"
+          >
+            <span
+              class="text-lg"
+            >
+              29
+            </span>
+          </div>
+          <div
+            class="h-full bg-gray-300"
+          />
+          <div
+            class="h-full bg-gray-300"
+          />
+          <div
+            class="h-full bg-gray-300"
+          />
+          <div
+            class="h-full bg-gray-300"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

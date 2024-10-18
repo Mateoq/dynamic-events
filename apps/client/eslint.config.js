@@ -15,7 +15,7 @@ const allConfig = {
 };
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+  baseDirectory: '.',
   recommendedConfig,
   allConfig
 })

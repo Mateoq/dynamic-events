@@ -17,7 +17,6 @@ export default function Home() {
     week,
     day
   };
-  console.log('SERVER?', calendarData);
 
   return (
     <main>

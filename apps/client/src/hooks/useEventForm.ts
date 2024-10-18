@@ -20,8 +20,8 @@ const schema = z.object({
   title: z.string().min(1, 'Title must not be empty'),
   description: z.string().min(1, 'Description must not be empty'),
   city: z.string().min(1, 'City must not be empty'),
-  startDate: z.any().optional(),
-  endDate: z.any().optional(),
+  startDate: z.date(),
+  endDate: z.date(),
   time: z.string(),
   fullDay: z.boolean().optional()
 });
@@ -65,20 +65,17 @@ export const useEventForm = (): UseEventFormOutput => {
   const submitHandler = useCallback(
     async (inputs: InputsType) => {
       console.log('INPUTS', inputs);
-      if (!inputs.startDate || !inputs.endDate) {
-        return;
-      }
 
       const dto: CreateEventDto = {
         title: inputs.title,
         description: inputs.description,
         city: inputs.city,
-        startYear: inputs.startDate.value.getFullYear(),
-        startMonth: inputs.startDate.value.getMonth(),
-        startDate: inputs.startDate.value.getDate(),
-        endYear: inputs.endDate.value.getFullYear(),
-        endMonth: inputs.endDate.value.getMonth(),
-        endDate: inputs.endDate.value.getDate(),
+        startYear: inputs.startDate.getFullYear(),
+        startMonth: inputs.startDate.getMonth(),
+        startDate: inputs.startDate.getDate(),
+        endYear: inputs.endDate.getFullYear(),
+        endMonth: inputs.endDate.getMonth(),
+        endDate: inputs.endDate.getDate(),
         time: parseInt(inputs.time),
         fullDay: !!inputs.fullDay,
         userId: userId!
@@ -89,6 +86,8 @@ export const useEventForm = (): UseEventFormOutput => {
         input: dto,
         isUpdate: !!eventId
       });
+
+      console.log('SUBMIT_RESULT', result);
 
       if (result) {
         reset();

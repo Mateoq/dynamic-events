@@ -29,54 +29,6 @@ export function checkIsToday(date: Date) {
   );
 }
 
-// export function getFirstDayIndex(date: Date) {
-//   return new Date(date.getFullYear(), date.getMonth(), 1).getDate();
-// }
-
-// export function getFirstDay(date: Date) {
-//   return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-// }
-
-// export function getLastDay(date: Date) {
-//   return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-// }
-
-// export function newDate(year: number, month: number, day: number): DateItem {
-//   const key = `${year}-${month}-${day}`;
-//   const date = new Date(year, month, day);
-//   const isToday = checkIsToday(date);
-
-//   return {
-//     key,
-//     date,
-//     isToday
-//   };
-// }
-
-// export function mapMonthData(date: Date): MonthData {
-//   // const firstDay = getFirstDay(date);
-//   const lastDate = getLastDay(date);
-//   const firstIndex = getFirstDayIndex(date);
-//   const lastIndex = lastDate;
-//   const dates: DateMap = {};
-//   let monthIndex = 1;
-
-//   for (let i = 0; i < MAX_CALENDAR_MONTH_INDEX; i++) {
-//     if (i > lastIndex) break;
-//     if (i < firstIndex) continue;
-
-//     const dateData = newDate(date.getFullYear(), date.getMonth(), monthIndex);
-//     dates[`${i}`] = dateData;
-//     monthIndex++;
-//   }
-
-//   return {
-//     firstIndex,
-//     lastIndex,
-//     dates
-//   };
-// }
-
 export function getYearKey(year: number): string {
   return `${year}`;
 }
@@ -222,8 +174,8 @@ export function createYearData(year: number): Year {
   };
 }
 
-export function initCalendarData(): CalendarData {
-  const initialYear = new Date().getFullYear();
+export function initCalendarData(initialDate = new Date()): CalendarData {
+  const initialYear = initialDate.getFullYear();
   const yearData = createYearData(initialYear);
   const yearMap: Record<string, Year> = {
     [getYearKey(initialYear)]: yearData
@@ -257,7 +209,6 @@ export function mapMonthDays(data: Month): Array<null | Day> {
   }
 
   let dayIndex = 0;
-  console.log('MONTH_DATA', data);
   for (let i = 0; i < MAX_CALENDAR_MONTH_INDEX; i++) {
     if (i < data.firstIndex || i > days.length - 1) {
       result.push(null);

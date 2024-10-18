@@ -25,6 +25,7 @@ export const Modal: React.FC<React.PropsWithChildren<ModalProps>> = (props) => {
               <h3 className="text-lg text-gray-50 font-medium">{title}</h3>
               <button
                 onClick={onClose}
+                aria-label="Close Modal"
                 className="h-6 w-6 transition-opacity hover:opacity-80 active:opacity-100"
               >
                 <FaXmark size="100%" className="text-gray-50" />

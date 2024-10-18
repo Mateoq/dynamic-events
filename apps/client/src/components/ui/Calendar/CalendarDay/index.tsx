@@ -22,10 +22,7 @@ const DayEvents: React.FC<DayEventsProps> = (props) => {
 
   if (
     eventData === null ||
-    !eventData.calendarEvents[year] ||
-    !eventData.calendarEvents[year][month] ||
-    !eventData.calendarEvents[year][month][day] ||
-    !eventData.calendarEvents[year][month][day][hour]
+    !eventData.calendarEvents[year]?.[month]?.[day]?.[hour]
   ) {
     return null;
   }

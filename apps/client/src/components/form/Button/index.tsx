@@ -13,7 +13,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
   return (
     <button
       {...rest}
-      className="min-w-24 h-10 px-3 flex items-center justify-center bg-gray-950 text-white text-lg hover:bg-gray-800 active:bg-gray-700 transition-colors"
+      className="min-w-24 h-10 px-3o flex items-center justify-center bg-gray-950 text-white text-lg hover:bg-gray-800 active:bg-gray-700 transition-colors"
     >
       {isLoading ? <LoadingIcon /> : children}
     </button>

@@ -34,6 +34,8 @@ export const useEventData = (email: string | null): UseEventDataOutput => {
     await refetch();
   };
 
+  console.log('EVENTS', data);
+
   return {
     data: data?.data ?? null,
     isLoading,

@@ -24,6 +24,7 @@ export const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>(
           <AnimatePresence>
             {isChecked && (
               <motion.div
+                role="img"
                 className="h-5 w-5 min-w-5"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

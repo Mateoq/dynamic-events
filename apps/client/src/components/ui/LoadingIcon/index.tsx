@@ -10,6 +10,7 @@ export const LoadingIcon: React.FC<LoadingIconProps> = (props) => {
   const { color = 'white' } = props;
   return (
     <motion.div
+      role="img"
       className="w-4 h-4 round-full"
       animate={{ rotate: [0, 360] }}
       transition={{ duration: 1, ease: 'linear', repeat: Infinity }}

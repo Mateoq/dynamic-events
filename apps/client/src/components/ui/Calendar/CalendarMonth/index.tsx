@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState, useMemo } from 'react';
+import React from 'react';
 
 import { EventCard } from '../../EventCard';
 import { useUserStore } from '@/stores/user-store';
@@ -19,6 +19,7 @@ const MonthEvents: React.FC<MonthEventsProps> = (props) => {
   const email = useUserStore((state) => state.email);
   const { data: eventData } = useEventData(email);
   const { year, month } = useCalendarStateStore((state) => state.calendarState);
+  console.log('EVENTS', eventData);
 
   if (
     eventData === null ||
@@ -55,7 +56,6 @@ export type CalendarMonthProps = {
 export const CalendarMonth: React.FC<CalendarMonthProps> = (props) => {
   const { data, onClickEvent } = props;
   const days = mapMonthDays(data);
-  console.log('DAYS', days);
 
   return (
     <div className="grid grid-cols-7 grid-rows-calendar bg-gray-400 gap-1">

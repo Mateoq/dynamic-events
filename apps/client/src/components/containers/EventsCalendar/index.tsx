@@ -31,7 +31,7 @@ export const EventsCalendar: React.FC<EventsCalendarProps> = (props) => {
 
   const setUserData = useUserStore((state) => state.setUserData);
 
-  const handleNaviation = (direction: Direction) => {
+  const handleNavigation = (direction: Direction) => {
     console.log('NAV', direction);
     let nextState = { ...calendarState };
     switch (currentView) {
@@ -84,7 +84,7 @@ export const EventsCalendar: React.FC<EventsCalendarProps> = (props) => {
           <Calendar
             data={calendarData}
             type={currentView}
-            onNav={handleNaviation}
+            onNav={handleNavigation}
             onCreateEvent={openEventModal}
             onChangeView={handleChangeView}
             onClickEvent={openEventOnModal}

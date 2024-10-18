@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventCard should match snapshot 1`] = `
+<div>
+  <button
+    class="flex-1 px-1 overflow-hidden"
+    style="background: rgb(255, 0, 255);"
+  >
+    <p
+      class="text-white text-sm truncate"
+    >
+      Test Event
+    </p>
+  </button>
+</div>
+`;

@@ -1,17 +1,23 @@
 import React from 'react';
 import clsx from 'clsx';
-import Datepicker, { DatepickerType } from 'react-tailwindcss-datepicker';
+import { FaCalendar } from 'react-icons/fa6';
+// import Datepicker, { DatepickerType } from 'react-tailwindcss-datepicker';
+import DDatePicker, {
+  DatePickerProps as DDatePickerProps
+} from 'react-datepicker';
 
-export interface DatePickerProps extends DatepickerType {
+import 'react-datepicker/dist/react-datepicker.css';
+
+export type DatePickerProps = DDatePickerProps & {
   label?: string;
   message?: string;
   error?: boolean;
   large?: boolean;
-}
+};
 
 export const DatePicker: React.FC<DatePickerProps> = (props) => {
   const { label, message, error, large, ...rest } = props;
-  console.log('VALUE', rest.value);
+  console.log('VALUE_DATE', rest.selected);
 
   return (
     <label className="flex flex-col w-fit">
@@ -26,11 +32,11 @@ export const DatePicker: React.FC<DatePickerProps> = (props) => {
         </span>
       )}
       <div className="relative w-fit">
-        <Datepicker
+        <DDatePicker
           {...rest}
-          asSingle
-          readOnly
-          inputClassName={clsx(
+          showIcon
+          icon={<FaCalendar className="text-gray-800 text-lg mt-1" />}
+          className={clsx(
             'min-w-64 min-h-11 border-2 px-2.5 rounded appearance-none cursor-pointer',
             {
               'border-gray-700': !error,

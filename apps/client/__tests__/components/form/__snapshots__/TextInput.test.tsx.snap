@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput should match snapshot 1`] = `
+<div>
+  <label
+    class="flex flex-col w-fit"
+  >
+    <span
+      class="text-xs mb-1 font-semibold uppercase text-gray-900"
+    >
+      TextInput Label
+    </span>
+    <div
+      class="relative w-fit"
+    >
+      <input
+        class="min-w-64 min-h-11 border-2 px-2.5 rounded appearance-none border-gray-700"
+        id="textinput"
+        name="textinput"
+      />
+    </div>
+  </label>
+</div>
+`;

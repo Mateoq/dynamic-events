@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Controller } from 'react-hook-form';
-import { DateValueType } from 'react-tailwindcss-datepicker';
+// import { DateValueType } from 'react-tailwindcss-datepicker';
 
 import { Modal } from '@/components/ui';
 import {
@@ -37,7 +37,6 @@ export const EventFormModal: React.FC = () => {
     hideModal();
   };
 
-  console.log('ERRORS', errors);
   const isChecked = watch('fullDay');
 
   return (
@@ -69,14 +68,10 @@ export const EventFormModal: React.FC = () => {
           render={({ field }) => (
             <DatePicker
               label="Start Date"
-              value={{
-                startDate: new Date((field.value as any).value),
-                endDate: new Date((field.value as any).value)
-              }}
-              onChange={(value) => field.onChange({ value: value?.startDate })}
+              selected={field.value}
+              onChange={(value) => field.onChange(value)}
               error={!!errors.startDate}
               message="Starting date required"
-              popoverDirection="up"
             />
           )}
         />
@@ -86,14 +81,10 @@ export const EventFormModal: React.FC = () => {
           render={({ field }) => (
             <DatePicker
               label="End Date"
-              value={{
-                startDate: new Date((field.value as any).value),
-                endDate: new Date((field.value as any).value)
-              }}
-              onChange={(value) => field.onChange({ value: value?.startDate })}
+              selected={field.value}
+              onChange={(value) => field.onChange(value)}
               error={!!errors.endDate}
               message="End date required"
-              popoverDirection="up"
             />
           )}
         />

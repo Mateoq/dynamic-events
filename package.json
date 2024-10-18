@@ -12,8 +12,8 @@
   ],
   "scripts": {
     "start:dev": "concurrently \"yarn start:dev:services\" \"yarn start:dev:client\"",
-    "start:dev:services": "yarn workspaces @dynamic-events/services start:dev",
-    "start:dev:client": "yarn workspaces @dynamic-events/client dev"
+    "start:dev:services": "yarn workspace @dynamic-events/services start:dev",
+    "start:dev:client": "yarn workspace @dynamic-events/client dev"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",

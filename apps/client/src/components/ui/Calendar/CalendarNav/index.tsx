@@ -27,12 +27,14 @@ export const CalendarNav: React.FC<CalendarNavProps> = (props) => {
     <div className="w-full flex justify-between bg-gray-100 px-2 py-3">
       <div className="flex gap-x-2">
         <button
+          aria-label="Previous"
           className="transition-opacity hover:opacity-70 active:opacity-100"
           onClick={() => onNav(Direction.LEFT)}
         >
           <FaChevronLeft size="30px" />
         </button>
         <button
+          aria-label="Next"
           className="transition-opacity hover:opacity-70 active:opacity-100"
           onClick={() => onNav(Direction.RIGHT)}
         >
